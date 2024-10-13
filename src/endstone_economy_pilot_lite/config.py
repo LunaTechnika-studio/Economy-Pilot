@@ -45,7 +45,7 @@ def check_config():
         toml_doc.add(tomlkit.comment("The currency symbol to use"))
         toml_doc["currency_symbol"] = config["currency_symbol"]
 
-        toml_doc.add(tomlkit.comment("Type of the database (sqlite, mysql, postgres)"))
+        toml_doc.add(tomlkit.comment("Type of the database (sqlite, mysql)"))
         toml_doc["database_type"] = config["database_type"]
 
         toml_doc.add(tomlkit.comment("The database host ip"))
