@@ -3,7 +3,8 @@
 This is a system/api plugin for an economy system for the endstone server software<br>
 
 ### Features<br>
-- multithreaded SQLite database for fast and simple operations<br>
+- multithreaded SQLite database for fast and simple operations locally<br>
+- External Mysql/MariaDB database support for more advanced users<br>
 - the ability to use commands as an api to interact with other plugins<br>
 - you can use custom symbols for currency<br>
 
