@@ -1,4 +1,4 @@
-![logo](https://github.com/legitbox/Economy-Pilot/blob/main/Economy%20Pilot.gif?raw=true)
+![logo](https://github.com/legitbox/Economy-Pilot/blob/main/EconomyPilotLogo.gif?raw=true)
 # EconomyPilot<br>
 This is a system/api plugin for an economy system for the endstone server software<br>
 
