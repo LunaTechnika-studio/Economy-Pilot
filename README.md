@@ -41,3 +41,14 @@ databases/
 `/deluser <player: str>` - if executed by the server it will remove the user's data from the database, <br>for example `/deluser legitbox7811`
 <br><br>
 `/nukedatabase` - WARNING!!! Nukes the database and stops the server
+
+### How to use Economy Pilot in your own plugin!<br>
+You can use the Economy API in your own python plugin by putting ![database_issuer](https://github.com/legitbox/Economy-Pilot/blob/main/for_devs/database_issuer.py) file inside your project and using its functions, you can directly run commands to interact with the Economy Pilot's database for better speed<br>
+
+Note! - there are comments inside the python file that explain what each function does and what it needs to work
+Note! - to make the database_issuer work you will need to add this dependancie in your project under the [project] tag
+```toml
+dependencies = [
+  "PyMySQL"
+]
+```
