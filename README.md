@@ -1,5 +1,5 @@
 ![logo](https://github.com/legitbox/Economy-Pilot/blob/main/EconomyPilotLogo.gif?raw=true)
-# EconomyPilot<br>
+# Economy Pilot<br>
 This is a system/api plugin for an economy system for the endstone server software<br>
 
 ### Features<br>
