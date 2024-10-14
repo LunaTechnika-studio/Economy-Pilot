@@ -3,7 +3,7 @@ import tomlkit
 import os
 
 
-version = "0.0.6"
+version = "0.0.7"
 
 config_file_name = f'economy-pilot.toml'
 

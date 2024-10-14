@@ -1,7 +1,7 @@
 import sqlite3
 import pymysql
 
-from endstone_economy_pilot_lite.config import check_config, load_config, config
+from endstone_economy_pilot.config import check_config, load_config, config
 from endstone import ColorFormat
 from pathlib import Path
 
