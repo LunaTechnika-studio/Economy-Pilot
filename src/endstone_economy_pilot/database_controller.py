@@ -16,6 +16,7 @@ database_host = config_data[3]
 database_username = config_data[4]
 database_password = config_data[5]
 database_name = config_data[6]
+database_port = config_data[7]
 
 directory_path = Path('databases/economy-pilot/')
 
@@ -45,6 +46,7 @@ def check_main_table() -> str:
             try:
                 connection = pymysql.connect(
                     host=database_host,
+                    port=databse_port,
                     user=database_username,
                     password=database_password,
                     database=database_name
@@ -84,6 +86,7 @@ def check_user_data(uuid, username):
         case "mysql":
             connection = pymysql.connect(
                 host=database_host,
+                port=databse_port,
                 user=database_username,
                 password=database_password,
                 database=database_name
@@ -116,6 +119,7 @@ def fetch_balance(username):
         case "mysql":
             connection = pymysql.connect(
                 host=database_host,
+                port=databse_port,
                 user=database_username,
                 password=database_password,
                 database=database_name
@@ -153,6 +157,7 @@ def check_player_username_for_change(uuid, unchecked_username):
         case "mysql":
             connection = pymysql.connect(
                 host=database_host,
+                port=databse_port,
                 user=database_username,
                 password=database_password,
                 database=database_name
@@ -213,6 +218,7 @@ def pay_to_player(sender_username, reciever_username, amount) -> str:
         case "mysql":
             connection = pymysql.connect(
                 host=database_host,
+                port=databse_port,
                 user=database_username,
                 password=database_password,
                 database=database_name
@@ -277,6 +283,7 @@ def set_balance(username, balance) -> str:
         case "mysql":
             connection = pymysql.connect(
                 host=database_host,
+                port=databse_port,
                 user=database_username,
                 password=database_password,
                 database=database_name
@@ -323,6 +330,7 @@ def server_pay(username, amount) -> str:
         case "mysql":
             connection = pymysql.connect(
                 host=database_host,
+                port=databse_port,
                 user=database_username,
                 password=database_password,
                 database=database_name
@@ -367,6 +375,7 @@ def server_deduct(username, amount) -> str:
         case "mysql":
             connection = pymysql.connect(
                 host=database_host,
+                port=databse_port,
                 user=database_username,
                 password=database_password,
                 database=database_name
@@ -431,6 +440,7 @@ def server_balance_fetch(username) -> str:
 def delete_user(username) -> str:
     connection = pymysql.connect(
         host=database_host,
+        port=databse_port,
         user=database_username,
         password=database_password,
         database=database_name
@@ -475,6 +485,7 @@ def nuke_database():
         case "mysql":
             connection = pymysql.connect(
                 host=database_host,
+                port=databse_port,
                 user=database_username,
                 password=database_password,
                 database=database_name

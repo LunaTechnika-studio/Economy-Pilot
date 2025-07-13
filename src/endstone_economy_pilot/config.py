@@ -12,6 +12,7 @@ database_type = "sqlite"
 directory = 'config'
 
 database_host = 'change if not using sqlite'
+database_port = 'change if not using sqlite'
 database_username = 'change if not using sqlite'
 database_password = 'change if not using sqlite'
 database_name = 'change if not using sqlite'
@@ -23,6 +24,7 @@ config = {
         "database_type": database_type,
 
         "database_host": database_host,
+        "database_port": database_type,
         "database_username": database_username,
         "database_password": database_password,
         "database_name": database_name
@@ -50,6 +52,9 @@ def check_config():
 
         toml_doc.add(tomlkit.comment("The database host ip"))
         toml_doc["database_host"] = config["database_host"]
+        
+        toml_doc.add(tomlkit.comment("The database host port"))
+        toml_doc["database_port"] = config["database_port"]
 
         toml_doc.add(tomlkit.comment("The database host username"))
         toml_doc["database_username"] = config["database_username"]
@@ -78,11 +83,12 @@ def load_config():
         u_database_type = toml_data.get("database_type")
 
         u_database_host = toml_data.get("database_host")
+        u_database_port = toml_data.get("database_port")
         u_database_username = toml_data.get("database_username")
         u_database_password = toml_data.get("database_password")
         u_database_name = toml_data.get("database_name")
 
-    return u_version, u_currency_symbol, u_database_type, u_database_host, u_database_username, u_database_password, u_database_name
+    return u_version, u_currency_symbol, u_database_type, u_database_host, u_database_username, u_database_password, u_database_name, u_database_port
 
 def update_config():
     current_config = load_config()
@@ -96,6 +102,7 @@ def update_config():
     config["database_username"] = current_config[4]
     config["database_password"] = current_config[5]
     config["database_name"] = current_config[6]
+    config["database_port"] = current_config[7]
 
     #if current_config[2] != "sqlite" or current_config[2] != "mysql" or current_config[2] != "postgres":
     #    print(current_config[2])
@@ -122,6 +129,9 @@ def update_config():
 
         toml_doc.add(tomlkit.comment("The database host ip"))
         toml_doc["database_host"] = config["database_host"]
+        
+        toml_doc.add(tomlkit.comment("The database host port"))
+        toml_doc["database_port"] = config["database_port"]
 
         toml_doc.add(tomlkit.comment("The database host username"))
         toml_doc["database_username"] = config["database_username"]
